@@ -1,0 +1,98 @@
+body{
+  background-color: lightblue;
+   background-size: cover;
+   display: grid;
+   height: 100%;
+   place-items: center;
+}
+.card {
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+
+.front {
+  background-color: #00ff15;
+  background-image: url(https://w7.pngwing.com/pngs/732/542/png-transparent-email-marketing-envelope-letter-icon-thumbnail.png);
+   border-radius: 50px;
+   margin-top: 150px;
+
+   background-size: cover;
+}
+
+.back {
+  background-color: rgb(214, 108, 108);
+  transform: rotateY(180deg);
+  border-radius: 50px;
+  margin-top: 150px;
+}
+
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0);
+}
+
+.back ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 300px;
+
+}
+
+.back ul li {
+  margin-bottom: 10px;
+
+}
+
+.back ul li a {
+  color: #000000;
+  text-decoration: none;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.img{
+  border: 1px solid;
+  width: 350px;
+  height: 270px;
+  position: absolute;
+  border-radius: 50px;
+  margin-top: 40px;
+  margin-left: 24px;
+  background-image: url(https://st2.depositphotos.com/1219867/8235/i/450/depositphotos_82350542-stock-photo-beautiful-gold-present-box-with.jpg);
+  background-size: cover;
+}
+.img span {
+  margin-left: 87px;
+  padding-top: 10px;
+  color: red;
+}
+.img:hover{
+  background-image: url(https://udelnaya.top-1000.ru/pic.php?url=foto/7fb08c21c1352a4bb84657e62bccad6f.webp&w=290&h=290&p=n);
+  transition: 1s;
+  transform: rotate(360deg);
+  background-size: cover;
+}
+@media (max-width:700px) {
+  .card{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+}
+body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+}
